@@ -4,8 +4,10 @@ from distutils.core import setup
 from catkin_pkg.python_setup import generate_distutils_setup
 
 d = generate_distutils_setup(
-    packages=['ros_vision_utils'],
-    package_dir={'ros_vision_utils': 'ros/src/ros_vision_utils'}
+    packages=['migrave_common_ros_utils',
+              'migrave_common_utils'],
+    package_dir={'migrave_common_ros_utils': 'ros/src/migrave_common_ros_utils',
+                 'migrave_common_utils': 'common/src/migrave_common_utils'}
 )
 
 setup(**d)
