@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "properties": {
+    "monitorName": {
+      "type": "string"
+    },
+    "monitorDescription": {
+      "type": "string"
+    },
+    "healthStatus": {
+      "type": "object",
+      "properties": {
+        "nan_ratio": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "nan_ratio"
+      ]
+    }
+  },
+  "required": [
+    "monitorName",
+    "monitorDescription",
+    "healthStatus"
+  ]
+}

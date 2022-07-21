@@ -1,0 +1,11 @@
+id: 'knowledge_base'
+data_transfer_timeout: 5.0 # (seconds) if component can not publish data for this time, reconfiguration is activated
+threshold: 0.65 # Percentage threshold of NaN values (in the pointcloud) that is acceptable.
+                # If number of NaN values exceeds this limit, the component starts recovery behaviour.
+
+monitoring:
+  pipeline_server: 'localhost:9092'
+  control_topic: 'monitor_manager'
+  monitor_manager_id: 'monitor_manager'
+  storage_manager_id: 'storage_manager'
+  monitors: ['pointcloud_monitor'] #list of the ids of the monitoring modes to run
